@@ -28,6 +28,15 @@ Syntax:
 For more options, run the command 
 `subset_fasta -h`
 
+## Check_fasta_format.py
+Format a corrupt fasta file to the right fasta format using biopython. 
+`Check_fasta_format.py -c CONTIGS -o OUTPUT`
+
+## Extract Interested sequences only from a fasta file 
+Extract all the sequences of interest from a fasta file using this script 
+`Extract_Interested_Seq.py [-h] [-in CONTIGS] [-i INDEX] [-o OUTPUT]`
+
+
 
 
 
