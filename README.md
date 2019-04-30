@@ -1,6 +1,5 @@
 # Useful-Scripts
-Some useful scripts we use all the time for quick manipulation of the files 
-
+Some useful scripts we use all the time for quick manipulation of files. Most of these scripts are written by us, but we do use others scripts as well, as mentioned below. 
 
 ## RunSeqLength
 sequence length in a multifasta file \
