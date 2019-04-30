@@ -46,6 +46,7 @@ For more options, run the command \
 `perl fastq-splitter.pl -h`
 
 
+## Contact us
 Contact help@ncgas.org if you have any questions. 
 
 
