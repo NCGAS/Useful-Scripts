@@ -3,16 +3,31 @@ Some useful scripts we use all the time for quick manipulation of the files
 
 
 ## RunSeqLength
-sequence length in a multifasta file 
+sequence length in a multifasta file \
  `cat fasta.fa | ./RunSeqLength | less`
  
-## fasta2oneline
-Convert a multifasta file to 2line fasta
+## fasta2oneline 
+Convert a multifasta file to 2line fasta \
 `file | fasta2oneline.ba > Singleline.file.fasta`
 
 ## addcolumns.py 
-Add columns to a blast output 
+Add columns to a blast output \
  `addcolumns.py input_file blast_file output_file`
+
+## subset_fasta.pl
+This is code written by Author: John Nash so please do look at the code for the LICENSE information or below\
+
+Function:  Takes a multiple fasta file and removes a set of sequences to makes a second fasta file.  Useful for pulling subsets of sequences from entire genomes. \
+Author: John Nash \
+Copyright (c) National Research Council of Canada, 2000-2003, all rights reserved. \
+Licence: This script may be used freely as long as no fee is charged for use, and as long as the author/copyright attributions are not removed. \
+
+Syntax:
+`subset_fasta -i list_file < fasta_file > subset_file`
+
+For more options, run the command 
+`subset_fasta -h`
+
 
 
 
