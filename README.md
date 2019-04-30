@@ -22,10 +22,10 @@ Author: John Nash \
 Copyright (c) National Research Council of Canada, 2000-2003, all rights reserved. \
 Licence: This script may be used freely as long as no fee is charged for use, and as long as the author/copyright attributions are not removed. 
 
-Syntax:
+Syntax: \
 `subset_fasta -i list_file < fasta_file > subset_file`
 
-For more options, run the command 
+For more options, run the command \
 `subset_fasta -h`
 
 ## Check_fasta_format.py
@@ -34,7 +34,7 @@ Format a corrupt fasta file to the right fasta format using biopython. \
 
 ## Extract Interested sequences only from a fasta file 
 Extract all the sequences of interest from a fasta file using this script \
-`Extract_Interested_Seq.py [-h] [-in CONTIGS] [-i INDEX] [-o OUTPUT]`
+`Extract_Interested_Seq.py -in CONTIGS -i INDEX -o OUTPUT`
 
 
 
