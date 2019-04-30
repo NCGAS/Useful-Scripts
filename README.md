@@ -37,7 +37,7 @@ Extract all the sequences of interest from a fasta file using this script \
 
 ## fastq-splitter
 This code is writted by Author: Kirill Kryukov, so please do look at the code for the LICENSE information. 
-FASTQ Splitter  -  a script for partitioning a FASTQ file into pieces
+FASTQ Splitter  -  a script for partitioning a FASTQ file into n pieces
 
 Syntax: \
 `fastq-splitter.pl [options] <file>`
@@ -46,7 +46,7 @@ For more options, run the command \
 `perl fastq-splitter.pl -h`
 
 
-
+Contact help@ncgas.org if you have any questions. 
 
 
 
