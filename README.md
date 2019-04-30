@@ -35,6 +35,17 @@ Format a corrupt fasta file to the right fasta format using biopython. \
 Extract all the sequences of interest from a fasta file using this script \
 `Extract_Interested_Seq.py -in CONTIGS -i INDEX -o OUTPUT`
 
+## fastq-splitter
+This code is writted by Author: Kirill Kryukov, so please do look at the code for the LICENSE information. 
+FASTQ Splitter  -  a script for partitioning a FASTQ file into pieces
+
+Syntax: \
+`fastq-splitter.pl [options] <file>`
+
+For more options, run the command \
+`perl fastq-splitter.pl -h`
+
+
 
 
 
