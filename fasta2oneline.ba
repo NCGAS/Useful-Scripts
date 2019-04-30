@@ -1,0 +1,4 @@
+#!/bin/bash
+#usage: file | fasta2oneline.ba > Singleline.file.fasta
+
+sed 's/\(>.*$\)/\1$/g' | tr '\n' '&' | sed -e 's/&//g' -e 's/>/\n>/g' -e 's/\$/\n/g' | sed 1d
