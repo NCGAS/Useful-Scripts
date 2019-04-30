@@ -2,7 +2,7 @@
 Some useful scripts we use all the time for quick manipulation of files. Most of these scripts are written by us, but we do use others scripts as well, as mentioned below. 
 
 ## RunSeqLength
-sequence length in a multifasta file \
+sequence length in a one line fasta file \
  `cat fasta.fa | ./RunSeqLength | less`
  
 ## fasta2oneline 
