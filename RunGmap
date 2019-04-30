@@ -1,0 +1,32 @@
+#PBS -k oe 
+#PBS -m abe
+#PBS -M ss93@iu.edu
+#PBS -N RunGmapBuildArach
+#PBS -l nodes=1:ppn=1,vmem=16gb,walltime=24:00:00
+
+##Move to correct WD
+#cd $PBS_O_WORKDIR
+cd /N/dc2/projects/mockaitis/CoffeeOne/ESTs/non_redundant/SS_EST_Mira_and_CAP3_evigene_run/okayset
+
+##load modules
+module load gmap/2017-06-20
+
+declare PATH=$PATH:/N/soft/rhel6/ncbi-blast+/2.5.0/ncbi-blast-2.5.0+/bin/
+
+##make reference
+# Gmap index the genomes
+#gmap_build -d combined -D /N/dc2/projects/mockaitis/Sanders/Arachis/CombinedGenomes/ combinedgenome.fa
+
+#run gmap
+genomes="carabica"
+refdir="/N/dc2/projects/mockaitis/CoffeeTwo/October_Reference/Mapping/carabica/"
+files="EST.okay.fa"
+gmap -f 2 -d $genomes -D $refdir -n 3 -t 8 $files > blast_results_okay_EST.gff &
+
+genomes="carabica"
+refdir="/N/dc2/projects/mockaitis/CoffeeTwo/October_Reference/Mapping/carabica/"
+files="EST.okalt.fa"
+gmap -f 2 -d $genomes -D $refdir -n 3 -t 8 $files > blast_results_okalt_EST.gff &
+
+wait
+
