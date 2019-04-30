@@ -20,7 +20,7 @@ This is code written by Author: John Nash so please do look at the code for the 
 Function:  Takes a multiple fasta file and removes a set of sequences to makes a second fasta file.  Useful for pulling subsets of sequences from entire genomes. \
 Author: John Nash \
 Copyright (c) National Research Council of Canada, 2000-2003, all rights reserved. \
-Licence: This script may be used freely as long as no fee is charged for use, and as long as the author/copyright attributions are not removed. \
+Licence: This script may be used freely as long as no fee is charged for use, and as long as the author/copyright attributions are not removed. 
 
 Syntax:
 `subset_fasta -i list_file < fasta_file > subset_file`
