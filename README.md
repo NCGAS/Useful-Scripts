@@ -48,7 +48,7 @@ For more options, run the command \
 ## Bashrc
 This file can be used instead of or in addition to your .bashrc file found in your home directory. It includes aliases to common mispellings and fat-fingers on the command line, changes your prompt to always display the time and your current path, and gives you a function for wiping out swaths of files from the data capacitor quickly.
 
-Right now it is set to work with Carbonate. If you want to try it out, you can source it like so: \
+Right now it is set to work with Carbonate. If you want to try it out, you can source it like so: 
 ```bash
 source bashrc
 # or
