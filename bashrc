@@ -42,24 +42,11 @@ if [ "$PS1" ]; then
         *)
             ;;
     esac
-    PS1="\[\033[0;95m\]Ca.\h.\D{%m%d%y:%H:%M}\[\033[0;96m\](\$(id -g -n))\[\033[0;95m\]:\[\033[0;91m\]\$(prettyPath)\[\033[0;92m\] $\[\033[0m\] "
-fi
-
-function munkill {
-    if [[ -z "$1" ]]; then
-	echo "No folder specified, not willing to blitz your current directory."
-	exit 1
-    elif [[ -f "$1" ]]; then
-	echo "Removing file $1"
-	munlink -- "$1"
-    elif [[ -d "$1" ]]; then
-	echo "Removing directory tree $1"
-	find "$1" -type f -print0 | xargs --no-run-if-empty -0 -I{} munlink -- "{}"
-	sleep 1
-	find "$1" -type l -print0 | xargs --no-run-if-empty -0 -n 1 -I{} unlink -- "{}"
-	sleep 1
-	find "$1" -type d -print0 | sort -r -z | xargs --no-run-if-empty -0 -n 1 -I{} bash -c ' if [[ -e "{}" ]]; then rmdir -p -- "{}" && echo "removed {}"; fi '
-	# sort -z or --files0-from=F
+    if [ -n "$SINGULARITY_CONTAINER" ]; then
+        #echo "if sing cont: $SINGULARITY_CONTAINER"
+        PS1="\[\033[0;95m\]Ca.\h.\D{%m%d%y:%H:%M}\[\033[0;96m\](~\${SINGULARITY_CONTAINER}~)\[\033[0;95m\]:\[\033[0;91m\]\$(prettyPath)\[\033[0;92m\] $\[\033[0m\] "
+    else
+        #echo "else sing cont: $SINGULARITY_CONTAINER"
+        PS1="\[\033[0;95m\]Ca.\h.\D{%m%d%y:%H:%M}\[\033[0;96m\](\$(id -g -n))\[\033[0;95m\]:\[\033[0;91m\]\$(prettyPath)\[\033[0;92m\] $\[\033[0m\] "
     fi
-    echo "Finished munlinking."
-}
+fi
