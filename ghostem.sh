@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#
+# !! Hey - this is beta software and should be used at your own risk!
+#
+
 ##########################################################################
 #  Ghostem - fast deletion of file contents while maintaining file's
 #  name and location intact. 
