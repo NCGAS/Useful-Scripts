@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ! $(command -v singularity) ]; then
+        module load singularity
+fi
+
+VERSION=1.5.1
+PACKAGE=raven
+TOOL=raven
+DIRECTORY=~/local/raven/
+STORAGE=/N/home/,/N/slate,/N/project
+
+OPTIONS=$OPTIONS" -B $STORAGE"
+
+singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif $TOOL "$@"
